@@ -1,0 +1,99 @@
+/* 设置窗口背景 */
+QWidget #wgt_dataSave,#wgt_radarBD,#wgt_scale,#wgt_dataShow,#wgt_connet,#wgt_targetSet,#wgt_obstacleSet,#wgt_paramSet {
+    background-color: rgb(13, 20, 71);
+}
+
+QWidget #wgt_top {
+    border-image: url(:/images/top.png);
+}
+
+QComboBox {
+    border: none;
+    background: transparent;
+    border-image: url(:/images/combo_normal.png); /* 默认背景 */
+}
+
+QComboBox::drop-down {
+    border: none;
+    background: transparent;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/images/arrow_down.png); /* 下拉箭头 */
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    border-image: url(:/images/arrowdown_background.png); /* 下拉菜单背景 */
+    border: 1px solid gray;
+    selection-background-color: lightblue; /* 选中项颜色 */
+}
+
+#btn_connectDev, #btn_setRange, #btn_radar1bd, #btn_radar2bd, #btn_radar3bd, #btn_radar4bd, #btn_clearTable, #btn_pause, #pushButton_send, #pushButton_stop, #pushButton_23, #pushButton_22, #btn_comDoc,
+#btn_obstacleSetSure, #btn_returnParam, #btn_paramSure, #btn_1mbd, #btn_3mbd, #btn_5mbd, #btn_45bd, #btn_fu45bd
+{
+background: transparent;  /* 背景透明 */
+border: 1px solid #25B6FF;  /* 2px 宽的蓝色边框 */
+border-radius: 5px;  /* 圆角边框 */
+}
+
+/* 鼠标悬停时修改背景 */
+#btn_connectDev:hover, #btn_setRange:hover, #btn_radar1bd:hover, #btn_radar2bd:hover, #btn_radar3bd:hover, #btn_radar4bd:hover, #btn_clearTable:hover, #btn_pause:hover, #pushButton_send:hover, #pushButton_stop:hover, #pushButton_23:hover, #pushButton_22:hover, #btn_comDoc:hover,
+#btn_obstacleSetSure:hover, #btn_returnParam:hover, #btn_paramSure:hover, #btn_1mbd:hover, #btn_3mbd:hover, #btn_5mbd:hover, #btn_45bd:hover, #btn_fu45bd:hover{
+    background: url(:/images/button_default.png); /* 替换为你的背景图片路径 */
+}
+
+/* 按钮被点击时修改背景 */
+#btn_connectDev:pressed, #btn_setRange:pressed, #btn_radar1bd:pressed, #btn_radar2bd:pressed, #btn_radar3bd:pressed, #btn_radar4bd:pressed, #btn_clearTable:pressed, #btn_pause:pressed, #pushButton_send:pressed, #pushButton_stop:pressed, #pushButton_23:pressed, #pushButton_22:pressed, #btn_comDoc:pressed,
+#btn_obstacleSetSure:pressed, #btn_returnParam:pressed, #btn_paramSure:pressed, #btn_1mbd:pressed, #btn_3mbd:pressed, #btn_5mbd:pressed, #btn_45bd:pressed, #btn_fu45bd:pressed {
+    background: url(:/images/button_checked.png); /* 替换为你的背景图片路径 */
+    border-image: url(:/images/button_line_hover.png); /* 替换为你的背景图片路径 */
+}
+
+QLineEdit {
+    border: none; /* 去除边框 */
+    border-image: url(:/images/linedit_param.png) 0 0 0 0 stretch stretch;
+}
+
+QSpinBox {
+    border: none; /* 去除边框 */
+    border-image: url(:/images/linedit_param.png) 0 0 0 0 stretch stretch;
+}
+
+QDoubleSpinBox {
+    border: none; /* 去除边框 */
+    border-image: url(:/images/linedit_param.png) 0 0 0 0 stretch stretch;
+}
+
+QCheckBox::indicator:unchecked {
+    border-image: url(:/images/checkbox_normal.png); /* 未选中状态的图片 */
+}
+
+QCheckBox::indicator:checked {
+    border-image: url(:/images/checkbox_checked.png); /* 选中状态的图片 */
+}
+
+#label, #label_6, #label_9, #label_10 , #label_11, #label_36 , #label_40 {
+    border-image: url(:/images/tittle_background.png) stretch;
+}
+
+QTableView {
+    background-color: rgb(24, 36, 95);
+    gridline-color: gray; /* 网格线颜色 */
+}
+QHeaderView::section {
+    background-color: rgb(24, 36, 95); /* 表头背景颜色 */
+}
+QTableView::item {
+    border: 1px dashed gray; /* 设置单元格的边框为灰色虚线 */
+}
+
+QMessageBox {
+    background-color: rgb(13, 20, 71);
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+QMessageBox::title { background-color: blue; color: white;}

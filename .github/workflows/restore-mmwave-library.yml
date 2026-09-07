@@ -1,0 +1,27 @@
+name: Restore complete mmWaveRadar library
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.upload-parts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore original QXlsx debug library
+        shell: bash
+        run: |
+          mkdir -p mmWaveRadar/libs/debug
+          cat .upload-parts/part* > mmWaveRadar/libs/debug/QXlsx.lib
+          echo "1dce77d125d3ef3efced62e3c789d6a7305b28dc60392fe3f8caae7589a83d78  mmWaveRadar/libs/debug/QXlsx.lib" | sha256sum -c -
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f mmWaveRadar/libs/debug/QXlsx.lib
+          git commit -m "Restore original QXlsx debug library"
+          git push
