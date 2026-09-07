@@ -17,6 +17,7 @@ jobs:
       - name: Restore original debug libraries
         shell: bash
         run: |
+          mkdir -p mmWaveRadar/libs/debug UltrasonicRadar/libs/debug
           cat .codex-upload-parts/mmwave/part* > mmWaveRadar/libs/debug/QXlsx.lib
           cat .codex-upload-parts/ultrasonic/part* > UltrasonicRadar/libs/debug/QXlsx.lib
           echo "1dce77d125d3ef3efced62e3c789d6a7305b28dc60392fe3f8caae7589a83d78  mmWaveRadar/libs/debug/QXlsx.lib" | sha256sum -c -
