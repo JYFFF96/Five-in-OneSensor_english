@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExportFrameDialog</class>
+ <widget class="QDialog" name="ExportFrameDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>184</width>
+    <height>185</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Select Frames</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox_frame">
+     <property name="title">
+      <string>Select Frame</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_frame">
+      <item>
+       <widget class="QRadioButton" name="radioCurrent">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+}
+
+QRadioButton::indicator:unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+/* 选中 */
+QRadioButton::indicator:checked {
+    image: url(:/images/radio_checked.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Current Frame</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioAll">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+}
+
+QRadioButton::indicator:unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+/* 选中 */
+QRadioButton::indicator:checked {
+    image: url(:/images/radio_checked.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>All Frames</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_range">
+        <item>
+         <widget class="QRadioButton" name="radioRange">
+          <property name="styleSheet">
+           <string notr="true">QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+}
+
+QRadioButton::indicator:unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+/* 选中 */
+QRadioButton::indicator:checked {
+    image: url(:/images/radio_checked.png);
+}</string>
+          </property>
+          <property name="text">
+           <string>Start Frame</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinStart">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::ButtonSymbols::UpDownArrows</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelTo">
+          <property name="text">
+           <string>-</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinEnd">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_save">
+     <property name="title">
+      <string>Archive Mode</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_save">
+      <item>
+       <widget class="QRadioButton" name="radioSingle">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+}
+
+QRadioButton::indicator:unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+/* 选中 */
+QRadioButton::indicator:checked {
+    image: url(:/images/radio_checked.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Save to One File</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioMulti">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+}
+
+QRadioButton::indicator:unchecked {
+    image: url(:/images/radio_unchecked.png);
+}
+
+/* 选中 */
+QRadioButton::indicator:checked {
+    image: url(:/images/radio_checked.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>One File per Frame</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

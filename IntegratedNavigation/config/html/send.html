@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Qt and HTML Interaction</title>
+    <script src="./qwebchannel.js"></script>
+</head>
+<body>
+    <h1>Qt and HTML Interaction</h1>
+    <p id="message">Waiting for C++ Send Message...</p>
+    <button onclick="requestMessage()">Get C++ Message</button>
+
+    <script>
+        var qtCommunicator;
+
+        new QWebChannel(qt.webChannelTransport, function (channel) {
+            qtCommunicator = channel.objects.qtCommunicator;
+            
+            // 监听 C++ 发送的消息
+            qtCommunicator.messageFromCpp.connect(function (message) {
+                document.getElementById("message").innerText = "From C++：" + message;
+            });
+        });
+
+        function requestMessage() {
+            alert("C++ Returned：" + qtCommunicator.getMessage());
+        }
+    </script>
+</body>
+</html>

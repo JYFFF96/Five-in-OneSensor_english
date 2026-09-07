@@ -1,0 +1,155 @@
+QWidget #wgt_top {
+    border-image: url(:/images/images/top.png);
+}
+
+QComboBox {
+    border: none;
+    padding: 2px 28px 2px 8px;
+    color: white;
+    border-image: url(:/images/images/combo_normal.png) 6 6 6 6 stretch stretch;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 24px; border: none; background: transparent;
+}
+QComboBox::down-arrow { image: url(:/images/images/arrow_down.png); width:12px; height:12px; }
+
+QComboBox::editable { background-color: transparent; }
+QComboBox QLineEdit { background-color: transparent; border: none; color: white; }
+
+QComboBox QAbstractItemView { border:1px solid #7a8799; background: transparent; outline:0; }
+QComboBox QAbstractItemView::viewport {
+    border-image: url(:/images/images/arrowdown_background.png) 6 6 6 6 stretch stretch;
+}
+QComboBox QAbstractItemView::item { padding:4px 8px; color:white; background:transparent; }
+QComboBox QAbstractItemView::item:selected { background: lightblue; color:black; }
+
+QPushButton {
+    background: transparent;  /* 背景透明 */
+    border: 1px solid #25B6FF;  /* 2px 宽的蓝色边框 */
+    border-radius: 5px;  /* 圆角边框 */
+    min-width: 100px;
+    min-height: 36px;
+    padding: 6px 12px;   /* 文字四周留白，会影响最终尺寸 */
+}
+
+/* 鼠标悬停时修改背景 */
+QPushButton:hover{
+    background: url(:/images/images/button_default.png); /* 替换为你的背景图片路径 */
+}
+
+/* 按钮被点击时修改背景 */
+QPushButton:pressed {
+    background: url(:/images/images/button_checked.png); /* 替换为你的背景图片路径 */
+    border-image: url(:/images/images/button_line_hover.png); /* 替换为你的背景图片路径 */
+}
+
+QPushButton.topTab {
+    border: 1px solid #25B6FF;  /* 2px 宽的蓝色边框 */
+    border-radius: 5px;  /* 圆角边框 */
+    background: transparent;
+}
+QPushButton.topTab:hover:!checked {
+    border: 1px solid #25B6FF;  /* 2px 宽的蓝色边框 */
+    border-radius: 5px;  /* 圆角边框 */
+    border-image: url(:/images/images/button_default.png);
+}
+
+/* 选中：始终显示选中图（悬停也一样） */
+QPushButton.topTab:checked {
+    border: 1px solid #25B6FF;  /* 2px 宽的蓝色边框 */
+    border-radius: 5px;  /* 圆角边框 */
+    border-image: url(:/images/images/Top_checked.png);
+}
+QPushButton.topTab:checked:hover {
+    border: 1px solid #25B6FF;  /* 2px 宽的蓝色边框 */
+    border-radius: 5px;  /* 圆角边框 */
+    border-image: url(:/images/images/Top_checked.png); /* 可省略，写上更直观 */
+}
+
+QPushButton#btn_autoStudy,#btn_groundStudy,#btn_targetStudy,#btn_toolStudy {
+   border:none;
+}
+
+QPushButton#btn_moveUp,#btn_moveDown,#btn_moveLeft,#btn_moveRight {
+max-width: 16px;
+    max-height: 16px;
+	min-width: 16px;
+    min-height: 16px;
+}
+
+QLineEdit {
+    background-color: rgb(55, 64, 122);   /* 和背景同色 */
+    color: white;                          /* 文字颜色 */
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 4px;
+    padding: 2px 6px;
+    selection-background-color: rgba(255,255,255,0.25);
+    selection-color: white;
+}
+QLineEdit:focus {
+    border: 1px solid #66ccff;            /* 聚焦时高亮，可按需改 */
+}
+QLineEdit:disabled {
+    color: rgba(255,255,255,0.5);
+    border-color: rgba(255,255,255,0.2);
+}
+
+QCheckBox::indicator:unchecked {
+    border-image: url(:/images/images/checkbox_normal.png); /* 未选中状态的图片 */
+}
+
+QCheckBox::indicator:checked {
+    border-image: url(:/images/images/checkbox_checked.png); /* 选中状态的图片 */
+}
+
+QTableView {
+    background-color: rgb(24, 36, 95);
+    gridline-color: gray; /* 网格线颜色 */
+}
+QHeaderView::section {
+    background-color: rgb(24, 36, 95); /* 表头背景颜色 */
+}
+QTableView::item {
+    border: 1px dashed gray; /* 设置单元格的边框为灰色虚线 */
+}
+
+QMessageBox {
+    background-color: rgb(13, 20, 71);
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+QMessageBox::title { background-color: blue; color: white;}
+
+QSpinBox, QDoubleSpinBox {
+    border: none;
+    background: transparent;
+    border-image: url(:/images/images/combo_normal.png); /* 默认背景 */
+}
+
+QListWidget {
+    border: none;
+    background: transparent;
+    border-image: url(:/images/images/combo_normal.png);
+}
+
+QMenu {
+    border: none;
+    background: transparent;
+    border-image: url(:/images/images/combo_normal.png);
+}
+
+QMenu::item:selected {
+    background-color: #0078d7;
+    color: white;
+}
+
+QDialog {
+    border: none;
+    background: transparent;
+    border-image: url(:/images/images/background.png);
+}
+
