@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>style.qss</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>images/wgt_background.png</file>
+        <file>images/background.png</file>
+        <file>images/plotBackground.png</file>
+        <file>images/top.png</file>
+        <file>images/button_checked.png</file>
+        <file>images/button_default.png</file>
+        <file>images/car.png</file>
+        <file>images/Top_checked.png</file>
+        <file>images/combo_normal.png</file>
+        <file>images/arrow_down.png</file>
+        <file>images/arrowdown_background.png</file>
+        <file>images/button_line.png</file>
+        <file>images/button_line_hover.png</file>
+        <file>images/checkbox_checked.png</file>
+        <file>images/checkbox_normal.png</file>
+        <file>images/linedit_param.png</file>
+        <file>images/lineedit_sendMsg.png</file>
+        <file>images/btn_close .png</file>
+        <file>images/tittle_background.png</file>
+        <file>images/logo.png</file>
+    </qresource>
+</RCC>
